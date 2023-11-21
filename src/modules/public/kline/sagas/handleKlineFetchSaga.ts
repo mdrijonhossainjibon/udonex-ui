@@ -49,6 +49,26 @@ export function* handleKlineFetchSaga(action: KlineFetch) {
 		});
 		yield put(klineData(convertedData));
 	} catch (error) {
+		// Handle the error and set default data for klineData
+		console.error('Error in handleKlineFetchSaga:', error);
+
+		// Set default data
+		// Set default data
+		const defaultData = [
+			{
+				date: Date.now(), // Set a default date (current timestamp)
+				open: 100, // Set a default open price
+				high: 120, // Set a default high price
+				low: 80, // Set a default low price
+				close: 110, // Set a default close price
+				volume: 1000, // Set a default volume
+			},
+			// Add more default data as needed
+		];
+
+		yield put(klineData(defaultData));
+
+		// Dispatch an alert with the error message
 		yield put(alertPush({ message: error.message, code: error.code, type: 'error' }));
 	}
 }

@@ -1,0 +1,596 @@
+[
+	{
+		"id": "ltcusdt",
+		"name": "LTC/USDT",
+		"base_unit": "LTC",
+		"quote_unit": "USDT",
+		"min_price": "0.000001",
+		"max_price": "1000",
+		"min_amount": "0.001",
+		"amount_precision": 4,
+		"price_precision": 8,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 2
+			}
+		]
+	},
+	{
+		"id": "btcusdt",
+		"name": "BTC/USDT",
+		"base_unit": "BTC",
+		"quote_unit": "USDT",
+		"min_price": "100",
+		"max_price": "50000",
+		"min_amount": "0.001",
+		"amount_precision": 4,
+		"price_precision": 8,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 3
+			}
+		]
+	},
+	{
+		"id": "btcltc",
+		"name": "BTC/LTC",
+		"base_unit": "BTC",
+		"quote_unit": "LTC",
+		"min_price": "0.000001",
+		"max_price": "100",
+		"min_amount": "0.001",
+		"amount_precision": 4,
+		"price_precision": 8,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "10",
+						"step": "2"
+					},
+					{
+						"limit": "20",
+						"step": "5"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "ltcbtc",
+		"name": "LTC/BTC",
+		"base_unit": "LTC",
+		"quote_unit": "BTC",
+		"min_price": "0.000001",
+		"max_price": "100",
+		"min_amount": "0.001",
+		"amount_precision": 4,
+		"price_precision": 8,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "10",
+						"step": "2"
+					},
+					{
+						"limit": "20",
+						"step": "5"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "eosbtc",
+		"name": "EOS/BTC",
+		"base_unit": "EOS",
+		"quote_unit": "BTC",
+		"min_price": "0.00001",
+		"max_price": "0.1",
+		"min_amount": "0.01",
+		"amount_precision": 3,
+		"price_precision": 6,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 3
+			}
+		]
+	},
+	{
+		"id": "xrpusdt",
+		"name": "XRP/USDT",
+		"base_unit": "XRP",
+		"quote_unit": "USDT",
+		"min_price": "0.1",
+		"max_price": "10",
+		"min_amount": "1",
+		"amount_precision": 2,
+		"price_precision": 4,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "5",
+						"step": "1"
+					},
+					{
+						"limit": "10",
+						"step": "2"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "adausdt",
+		"name": "ADA/USDT",
+		"base_unit": "ADA",
+		"quote_unit": "USDT",
+		"min_price": "0.05",
+		"max_price": "5",
+		"min_amount": "10",
+		"amount_precision": 1,
+		"price_precision": 3,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 2
+			}
+		]
+	},
+	{
+		"id": "linkbtc",
+		"name": "LINK/BTC",
+		"base_unit": "LINK",
+		"quote_unit": "BTC",
+		"min_price": "0.0005",
+		"max_price": "0.5",
+		"min_amount": "0.1",
+		"amount_precision": 2,
+		"price_precision": 5,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "0.2",
+						"step": "0.05"
+					},
+					{
+						"limit": "0.4",
+						"step": "0.1"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "xrpbtc",
+		"name": "XRP/BTC",
+		"base_unit": "XRP",
+		"quote_unit": "BTC",
+		"min_price": "0.00002",
+		"max_price": "0.2",
+		"min_amount": "0.005",
+		"amount_precision": 3,
+		"price_precision": 6,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 3
+			}
+		]
+	},
+	{
+		"id": "dogeusdt",
+		"name": "DOGE/USDT",
+		"base_unit": "DOGE",
+		"quote_unit": "USDT",
+		"min_price": "0.0001",
+		"max_price": "0.1",
+		"min_amount": "100",
+		"amount_precision": 0,
+		"price_precision": 4,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "0.05",
+						"step": "0.01"
+					},
+					{
+						"limit": "0.1",
+						"step": "0.02"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "ethusdc",
+		"name": "ETH/USDC",
+		"base_unit": "ETH",
+		"quote_unit": "USDC",
+		"min_price": "10",
+		"max_price": "10000",
+		"min_amount": "0.01",
+		"amount_precision": 4,
+		"price_precision": 6,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 2
+			}
+		]
+	},
+	{
+		"id": "ethbtc",
+		"name": "ETH/BTC",
+		"base_unit": "ETH",
+		"quote_unit": "BTC",
+		"min_price": "0.01",
+		"max_price": "10",
+		"min_amount": "0.001",
+		"amount_precision": 4,
+		"price_precision": 8,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "5",
+						"step": "1"
+					},
+					{
+						"limit": "10",
+						"step": "2"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "ethusdt",
+		"name": "ETH/USDT",
+		"base_unit": "ETH",
+		"quote_unit": "USDT",
+		"min_price": "50",
+		"max_price": "5000",
+		"min_amount": "0.01",
+		"amount_precision": 3,
+		"price_precision": 6,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 4
+			}
+		]
+	},
+	{
+		"id": "ethbnb",
+		"name": "ETH/BNB",
+		"base_unit": "ETH",
+		"quote_unit": "BNB",
+		"min_price": "0.1",
+		"max_price": "100",
+		"min_amount": "0.01",
+		"amount_precision": 2,
+		"price_precision": 5,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 3
+			}
+		]
+	},
+	{
+		"id": "ethltc",
+		"name": "ETH/LTC",
+		"base_unit": "ETH",
+		"quote_unit": "LTC",
+		"min_price": "0.001",
+		"max_price": "1",
+		"min_amount": "0.1",
+		"amount_precision": 1,
+		"price_precision": 5,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "0.2",
+						"step": "0.05"
+					},
+					{
+						"limit": "0.5",
+						"step": "0.1"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "bnbusdt",
+		"name": "BNB/USDT",
+		"base_unit": "BNB",
+		"quote_unit": "USDT",
+		"min_price": "100",
+		"max_price": "1000",
+		"min_amount": "0.1",
+		"amount_precision": 2,
+		"price_precision": 4,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "200",
+						"step": "50"
+					},
+					{
+						"limit": "500",
+						"step": "100"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "solusdt",
+		"name": "SOL/USDT",
+		"base_unit": "SOL",
+		"quote_unit": "USDT",
+		"min_price": "10",
+		"max_price": "1000",
+		"min_amount": "0.1",
+		"amount_precision": 3,
+		"price_precision": 4,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "50",
+						"step": "10"
+					},
+					{
+						"limit": "100",
+						"step": "20"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "arneth",
+		"name": "ARN/ETH",
+		"base_unit": "ARN",
+		"quote_unit": "ETH",
+		"min_price": "0.0005",
+		"max_price": "0.05",
+		"min_amount": "1",
+		"amount_precision": 0,
+		"price_precision": 5,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 3
+			}
+		]
+	},
+	{
+		"id": "algobtc",
+		"name": "ALGO/BTC",
+		"base_unit": "ALGO",
+		"quote_unit": "BTC",
+		"min_price": "0.00001",
+		"max_price": "0.1",
+		"min_amount": "0.01",
+		"amount_precision": 2,
+		"price_precision": 6,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "0.05",
+						"step": "0.01"
+					},
+					{
+						"limit": "0.1",
+						"step": "0.02"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "trxusdt",
+		"name": "TRX/USDT",
+		"base_unit": "TRX",
+		"quote_unit": "USDT",
+		"min_price": "0.001",
+		"max_price": "0.1",
+		"min_amount": "10",
+		"amount_precision": 1,
+		"price_precision": 4,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 3
+			}
+		]
+	},
+	{
+		"id": "solbtc",
+		"name": "SOL/BTC",
+		"base_unit": "SOL",
+		"quote_unit": "BTC",
+		"min_price": "0.0001",
+		"max_price": "0.5",
+		"min_amount": "0.1",
+		"amount_precision": 1,
+		"price_precision": 4,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "0.2",
+						"step": "0.05"
+					},
+					{
+						"limit": "0.4",
+						"step": "0.1"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "arnusdt",
+		"name": "ARN/USDT",
+		"base_unit": "ARN",
+		"quote_unit": "USDT",
+		"min_price": "0.01",
+		"max_price": "1",
+		"min_amount": "1",
+		"amount_precision": 0,
+		"price_precision": 4,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "0.2",
+						"step": "0.05"
+					},
+					{
+						"limit": "0.5",
+						"step": "0.1"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "algousdt",
+		"name": "ALGO/USDT",
+		"base_unit": "ALGO",
+		"quote_unit": "USDT",
+		"min_price": "1",
+		"max_price": "100",
+		"min_amount": "0.1",
+		"amount_precision": 3,
+		"price_precision": 2,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "50",
+						"step": "10"
+					},
+					{
+						"limit": "100",
+						"step": "20"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "trxbtc",
+		"name": "TRX/BTC",
+		"base_unit": "TRX",
+		"quote_unit": "BTC",
+		"min_price": "0.000001",
+		"max_price": "0.0001",
+		"min_amount": "100",
+		"amount_precision": 0,
+		"price_precision": 8,
+		"state": "active",
+		"filters": [
+			{
+				"type": "custom_price_steps",
+				"rules": [
+					{
+						"limit": "0.00002",
+						"step": "0.000005"
+					},
+					{
+						"limit": "0.00005",
+						"step": "0.00001"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "solusdc",
+		"name": "SOL/USDC",
+		"base_unit": "SOL",
+		"quote_unit": "USDC",
+		"min_price": "20",
+		"max_price": "2000",
+		"min_amount": "0.01",
+		"amount_precision": 4,
+		"price_precision": 6,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 2
+			}
+		]
+	},
+	{
+		"id": "arnceth",
+		"name": "ARN/CETH",
+		"base_unit": "ARN",
+		"quote_unit": "CETH",
+		"min_price": "0.0005",
+		"max_price": "0.05",
+		"min_amount": "1",
+		"amount_precision": 0,
+		"price_precision": 5,
+		"state": "active",
+		"filters": [
+			{
+				"type": "significant_digits",
+				"digits": 3
+			}
+		]
+	}
+]

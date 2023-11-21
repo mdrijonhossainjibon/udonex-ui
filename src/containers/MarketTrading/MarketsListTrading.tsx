@@ -4,13 +4,22 @@ import { MarketTradingSvg } from 'assets/images/trading/MarketTradingSvg';
 import classnames from 'classnames';
 import { Decimal, TableTrading } from 'components';
 import find from 'lodash/find';
-import { depthFetch, Market, selectCurrentMarket, selectMarketTickers, setCurrentMarket, setCurrentPrice } from 'modules';
+import {
+	depthFetch,
+	Market,
+	marketsData,
+	selectCurrentMarket,
+	selectMarketTickers,
+	setCurrentMarket,
+	setCurrentPrice,
+} from 'modules';
 import * as React from 'react';
 import isEqual from 'react-fast-compare';
 import { useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { MarketsListTradingStyle } from './styles';
+import dataJson from './data.json';
 
 interface MarketsListTradingComponentProps {
 	data: Market[];
@@ -42,6 +51,9 @@ const MarketsListTradingComponent: React.FC<MarketsListTradingComponentProps> = 
 
 	const currentMarket = useSelector(selectCurrentMarket, isEqual);
 	const marketTickers = useSelector(selectMarketTickers, isEqual);
+	React.useEffect(() => {
+		dispatch(marketsData(dataJson));
+	}, [dispatch]);
 
 	const currencyPairSelectHandler = (key: string) => {
 		const marketToSet = props.data.find(market => market.name === key);

@@ -155,13 +155,7 @@
 		"webpack": "4.42.0",
 		"webpack-obfuscator": "^0.18.0"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "pretty-quick --staged",
-			"commit-msg": "yarn lint",
-			"pre-push": "yarn lint"
-		}
-	},
+
 	"prettier": {
 		"trailingComma": "all",
 		"tabWidth": 4,

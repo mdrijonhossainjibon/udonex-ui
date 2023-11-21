@@ -19,6 +19,7 @@ import {
 	selectUserLoggedIn,
 	selectWallets,
 	setCurrentPrice,
+	userOpenOrdersData,
 	Wallet,
 	walletsFetch,
 } from 'modules';
@@ -399,9 +400,9 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 	};
 
 	const getWallet = (currency: string, walletsParam: WalletItemProps[]) => {
-		const currencyLower = currency.toLowerCase();
+		const currencyLower = currency.toLocaleLowerCase();
 
-		return walletsParam.find(w => w.currency === currencyLower) as Wallet;
+		return walletsParam.find(w => w.currency.toLocaleLowerCase().includes(currencyLower)) as Wallet;
 	};
 
 	const getAvailableValue = (wallet: Wallet | undefined) => {
@@ -524,6 +525,29 @@ export const NewOrder: React.FC<OrderProps> = ({}) => {
 		if (orderAllowed) {
 			dispatch(orderExecuteFetch(order));
 			resetAfterSubmit(type);
+			dispatch(
+				userOpenOrdersData([
+					{
+						price: order.price?.toString() || '0',
+						state: 'wait',
+						remaining_volume: '8',
+						origin_volume: '10',
+						executed_volume: '2',
+						side: order.side,
+						market: order.market,
+						ord_type: 'limit',
+						avg_price: '0.014',
+						volume: Number(order.volume),
+						created_at: '2023-01-01T12:00:00Z',
+						updated_at: '2023-01-02T15:30:00Z',
+						confirmed: true,
+						uuid: 'd3f7b8c1-8ed8-4e22-9e26-92c9f38c2c0a',
+						id: 12345,
+						kind: 'ask',
+						trades_count: 2,
+					},
+				]),
+			);
 		}
 	};
 
